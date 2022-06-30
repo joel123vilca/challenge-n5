@@ -13,10 +13,6 @@ const Products = () => {
   const dispatch = useDispatch();
   const data = useSelector(productsSelector);
   const shopping = useSelector(shoppingSelector);
-  useEffect(() => {
-    dispatch(shoppingActions.getShopping());
-    dispatch(shoppingActions.getProducts());
-  }, []);
 
   const addCart = (product) => {
     let cart = JSON.parse(shopping);
@@ -54,6 +50,12 @@ const Products = () => {
     cart = cart.filter((item) => item.id === id);
     return cart.length > 0 ? cart[0].count : 0;
   };
+
+  useEffect(() => {
+    dispatch(shoppingActions.getShopping());
+    dispatch(shoppingActions.getProducts());
+  }, [dispatch]);
+
   return (
     <div className="products">
       <div className="banner">

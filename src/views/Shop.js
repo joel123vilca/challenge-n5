@@ -12,10 +12,6 @@ export const Shop = () => {
 
   const shopping = JSON.parse(useSelector(shoppingSelector));
 
-  useEffect(() => {
-    dispatch(shoppingActions.getShopping());
-  }, []);
-
   const totalPay = () => {
     let sum = 0;
 
@@ -29,6 +25,10 @@ export const Shop = () => {
     localStorage.clear();
     navigate(`/products`);
   };
+
+  useEffect(() => {
+    dispatch(shoppingActions.getShopping());
+  }, [dispatch]);
   return (
     <div className="shop">
       <h3>List of products</h3>

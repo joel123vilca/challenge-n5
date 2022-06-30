@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import "./product.scss";
+
 const Product = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -24,7 +25,6 @@ const Product = () => {
       id: 11,
       ...values,
     };
-    console.log(payload);
     dispatch(shoppingActions.createProduct(payload));
     navigate(`/products`);
   };
