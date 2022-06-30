@@ -1,0 +1,46 @@
+.header {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 1px solid #e6e6e6;
+  .title {
+    font-weight: 800;
+    color: #209c93;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+  .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cart__icon {
+      cursor: pointer;
+      img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+      }
+      span {
+        position: absolute;
+        background-color: #f39f64;
+        color: #fff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-left: -10px;
+        margin-top: -5px;
+      }
+    }
+    button {
+      margin-left: 20px;
+      background-color: #f39f64;
+      border: 1px solid #f39f64;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
